@@ -1,11 +1,24 @@
 <template name="item">
-  <li>
-    {{content}}
-    <button class="remove-item">&times;</button>
-    {{upvote}}
-    <button class="upvote-item">+</button>
-    {{downvote}}
-    <button class="downvote-item">-</button>
-  </li>
-
+  <tr>
+    <th>
+      {{content}}
+    </th>
+    <td>
+      {{upvote}}
+    </td>
+    <td>
+      {{downvote}} 
+    </td>
+    <td>
+      <button class="upvote-item btn btn-success bmd-btn-fab-sm">
+        <i class="material-icons">exposure_plus_1</i>
+      </button>
+      <button class="downvote-item btn btn-warning bmd-btn-fab-sm">
+        <i class="material-icons">exposure_minus_1</i>
+      </button>
+      <button class="remove-item btn btn-danger bmd-btn-fab-sm">
+        <i class="material-icons">remove_circle</i>
+      </button>
+    </td>
+  </tr>
 </template>

@@ -1,33 +1,34 @@
-<body>
-
-  <div class="container">
-
-    <header>
-
-      <h1>Todo List</h1>
-       
-
+<body class='d-flex justify-content-center'>
+  <div class="flex-column">
+    <div class="container">
+      <h1 class="display-4 text-centre">The best breads ever!</h1>
+      <p class="lead text-centre">You can vote for the best bread.</p>
       <form class="new-item">
-
-        <input type="text" name="content" placeholder="Type to add new item" />
-
+        <input id='new-bread-input' type="text" name="content" placeholder="Type and push enter to add new bread" />
       </form>
-
-
-
-    </header>
-
-    <ul>
-      {{items.length}}
-
-      {{#each items}}
-
-      {{> item}}
-
-      {{/each}}
-
-    </ul>
-
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">+</th>
+            <th scope="col">-</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each items}}
+          {{> item}}
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
   </div>
 
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+  <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
 </body>

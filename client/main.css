@@ -2,3 +2,15 @@ body {
   padding: 10px;
   font-family: sans-serif;
 }
+
+#new-bread-input {
+  width: 100%;
+}
+
+.text-centre {
+  text-align: center;
+}
+
+table {
+  text-align: center;
+}
