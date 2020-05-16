@@ -11,11 +11,9 @@ import './items.js';
  
 
 Template.body.helpers({
-
   items(){
     return Items.find({});
   } 
-
 });
 
 Template.body.events({
@@ -28,6 +26,8 @@ Template.body.events({
     // Insert a task into the collection
     Items.insert({
       content,
+      upvote: 0,
+      downvote: 0,
       createdAt: new Date(), // current time
     });
     // Clear form
