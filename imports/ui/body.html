@@ -1,0 +1,41 @@
+<body>
+
+  <div class="container">
+
+    <header>
+
+      <h1>Todo List</h1>
+       
+
+      <form class="new-item">
+
+        <input type="text" name="content" placeholder="Type to add new item" />
+
+      </form>
+
+
+
+    </header>
+
+    <ul>
+      {{items.length}}
+
+      {{#each items}}
+
+      {{> item}}
+
+      {{/each}}
+
+    </ul>
+
+  </div>
+
+</body>
+
+
+
+<template name="item">
+
+  <li>{{content}}</li>
+
+</template>
