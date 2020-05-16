@@ -12,7 +12,7 @@ import './items.js';
 
 Template.body.helpers({
   items(){
-    return Items.find({});
+    return Items.find({}, { sort: { upvote: -1, downvote: 1 } });
   } 
 });
 
