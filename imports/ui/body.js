@@ -6,6 +6,7 @@ import { Items } from '../api/items.js';
  
 
 import './body.html';
+import './items.js';
 
  
 
@@ -32,5 +33,4 @@ Template.body.events({
     // Clear form
     target.content.value = '';
   },
-  
 });
